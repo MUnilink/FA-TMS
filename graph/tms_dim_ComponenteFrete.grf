@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?><Graph author="isabela.lourencini" created="Thu Dec 20 09:45:28 BRST 2018" guiVersion="3.4.4.P" id="1545312633312" licenseType="Commercial" modified="Tue Aug 10 14:13:49 BRT 2021" modifiedBy="Breno" name="tms_dim_ComponenteFrete" revision="1.29" showComponentDetails="true">
+<Global>
+<Metadata fileURL="${META_DIR}/obj_dto.fmt" id="Metadata3"/>
+<Metadata id="Metadata0" previewAttachment="zip:(${DATA_SOURCE_DIR}/CSV - TMS.zip)#Componente Frete.csv" previewAttachmentCharset="ISO-8859-1">
+<Record fieldDelimiter="," label="zip:(./data/source/CSV - TMS.zip)#Componente Frete.csv" name="Componente_Frete_Input" previewAttachmentCharset="ISO-8859-1" quoteChar="&quot;" quotedStrings="true" recordDelimiter="\n" skipSourceRows="1" type="delimited">
+<Field name="BK_COMPONENTE" type="string"/>
+<Field name="COD_COMPONENTE" type="string"/>
+<Field eofAsDelimiter="false" name="DES_COMPONENTE" type="string"/>
+<Field name="INSTANCIA" type="string"/>
+</Record>
+</Metadata>
+<Metadata id="Metadata1" previewAttachment="zip:(${DATA_SOURCE_DIR}/CSV - TMS.zip)#Componente Frete.csv" previewAttachmentCharset="ISO-8859-1">
+<Record fieldDelimiter="," label="zip:(./data/source/CSV - TMS.zip)#Componente Frete.csv" name="Componente_Frete_Output" previewAttachmentCharset="ISO-8859-1" quoteChar="&quot;" quotedStrings="true" recordDelimiter="\n" skipSourceRows="1" type="delimited">
+<Field name="BK_COMPONENTE" type="string"/>
+<Field name="COD_COMPONENTE" type="string"/>
+<Field eofAsDelimiter="false" name="DES_COMPONENTE" type="string"/>
+<Field name="INSTANCIA" type="string"/>
+</Record>
+</Metadata>
+<Property fileURL="workspace.prm" id="GraphParameter0"/>
+<Sequence cached="8" id="Sequence0" name="SequenciaHom" start="1" step="1" type="PRIMITIVE_SEQUENCE"/>
+<Note alignment="1" backgroundColorB="225" backgroundColorG="255" backgroundColorR="255" enabled="true" folded="false" height="138" id="Note0" textColorB="0" textColorG="0" textColorR="0" textFontSize="8" title="1. CARGA DO DATASET COMPONENTE FRETE (DIMENSÃO)" titleColorB="0" titleColorG="0" titleColorR="0" titleFontSize="10" width="559" x="-74" y="11"/>
+<Dictionary/>
+</Global>
+<Phase number="10">
+<Node charset="ISO-8859-1" enabled="enabled" fileURL="zip:(${DATA_SOURCE_DIR}/${gdc_agent_zip})#TMS Componente Frete.csv*" guiName="Componente Frete" guiX="-59" guiY="49" id="COMPONENTE_FRETE" type="DATA_READER"/>
+<Node dataset="dataset.componentefrete" datasetFieldMappings="{&quot;gd_dataset&quot;:{&quot;datasetId&quot;:&quot;dataset.componentefrete&quot;,&quot;datasetTitle&quot;:&quot;Componente Frete&quot;,&quot;attributes&quot;:[{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.componentefrete.codigocomponente&quot;,&quot;title&quot;:&quot;Código Componente&quot;,&quot;prettyId&quot;:&quot;attr_componentefrete_codigocomponente&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.componentefrete.codigocomponente&quot;,&quot;title&quot;:&quot;Código Componente&quot;,&quot;prettyId&quot;:&quot;codigocomponente&quot;,&quot;assignedMetadataField&quot;:&quot;COD_COMPONENTE&quot;,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}}],&quot;assignedMetadataField&quot;:null,&quot;selectedDisplayForm&quot;:null}},{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.componentefrete.descricaocomponente&quot;,&quot;title&quot;:&quot;Descrição Componente&quot;,&quot;prettyId&quot;:&quot;attr_componentefrete_descricaocomponente&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.componentefrete.descricaocomponente&quot;,&quot;title&quot;:&quot;Descrição Componente&quot;,&quot;prettyId&quot;:&quot;descricaocomponente&quot;,&quot;assignedMetadataField&quot;:&quot;DES_COMPONENTE&quot;,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}}],&quot;assignedMetadataField&quot;:null,&quot;selectedDisplayForm&quot;:null}},{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.componentefrete.idcomponente&quot;,&quot;title&quot;:&quot;ID Componente&quot;,&quot;prettyId&quot;:&quot;attr_componentefrete_idcomponente&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.componentefrete.idcomponente&quot;,&quot;title&quot;:&quot;ID Componente&quot;,&quot;prettyId&quot;:&quot;idcomponente&quot;,&quot;assignedMetadataField&quot;:&quot;BK_COMPONENTE&quot;,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}}],&quot;assignedMetadataField&quot;:null,&quot;selectedDisplayForm&quot;:null}}],&quot;referencedAttributes&quot;:[{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.instancia.iddainstancia&quot;,&quot;title&quot;:&quot;Id da Instância&quot;,&quot;prettyId&quot;:&quot;attr_instancia_iddainstancia&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.instancia.iddainstancia&quot;,&quot;title&quot;:&quot;Id da Instância&quot;,&quot;prettyId&quot;:&quot;instancia__iddainstancia&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:false}}],&quot;assignedMetadataField&quot;:&quot;INSTANCIA&quot;,&quot;selectedDisplayForm&quot;:{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.instancia.iddainstancia&quot;,&quot;title&quot;:&quot;Id da Instância&quot;,&quot;prettyId&quot;:&quot;instancia__iddainstancia&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:false}}}}],&quot;dateAttributes&quot;:[],&quot;simpleFacts&quot;:[],&quot;dateFacts&quot;:[],&quot;unassigneddateFacts&quot;:[],&quot;entitiesWithoutMetadata&quot;:[],&quot;entitiesWithoutValue&quot;:[],&quot;datesWithFactConflict&quot;:[],&quot;fieldsWithMetadataConflict&quot;:[]}}" enabled="enabled" guiName="Componente Frete" guiX="311" guiY="49" id="COMPONENTE_FRETE1" mode="${LOAD_MODE_DIM}" retriesInterval="60" retriesNumber="5" type="GD_DATASET_WRITER"/>
+<Node enabled="enabled" guiName="Tratament" guiX="130" guiY="49" id="TRATAMENT" type="REFORMAT">
+<attr name="transform"><![CDATA[//#CTL2
+import "trans/lib.ctl";
+// Transforms input record into output record.
+function integer transform() {
+	if (GOODDATA_DEMO_MODE == 'S') sequence(SequenciaHom).next();
+	
+	$out.0.BK_COMPONENTE = formatKey($in.0.BK_COMPONENTE, true);
+	$out.0.COD_COMPONENTE = formatString($in.0.COD_COMPONENTE, null);
+	$out.0.DES_COMPONENTE = formatString($in.0.DES_COMPONENTE, 'COMPONENTE ' + sequence(SequenciaHom).current());
+	
+	$out.0.INSTANCIA = formatKey($in.0.INSTANCIA, true);
+
+	return ALL;
+}
+
+// Called during component initialization.
+// function boolean init() {}
+
+// Called during each graph run before the transform is executed. May be used to allocate and initialize resources
+// required by the transform. All resources allocated within this method should be released
+// by the postExecute() method.
+// function void preExecute() {}
+
+// Called only if transform() throws an exception.
+// function integer transformOnError(string errorMessage, string stackTrace) {}
+
+// Called during each graph run after the entire transform was executed. Should be used to free any resources
+// allocated within the preExecute() method.
+// function void postExecute() {}
+
+// Called to return a user-defined error message when an error occurs.
+// function string getMessage() {}
+]]></attr>
+</Node>
+<Edge debugMode="true" fromNode="COMPONENTE_FRETE:0" guiBendpoints="" guiRouter="Manhattan" id="Edge0" inPort="Port 0 (in)" metadata="Metadata0" outPort="Port 0 (output)" toNode="TRATAMENT:0"/>
+<Edge debugMode="true" fromNode="TRATAMENT:0" guiBendpoints="" guiRouter="Manhattan" id="Edge1" inPort="Port 0 (in)" metadata="Metadata1" outPort="Port 0 (out)" toNode="COMPONENTE_FRETE1:0"/>
+</Phase>
+</Graph>

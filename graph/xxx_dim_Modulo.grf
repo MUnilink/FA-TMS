@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?><Graph author="diego.guedes" created="Mon Oct 23 06:58:29 CDT 2017" guiVersion="3.4.4.P" id="1508859235635" licenseType="Commercial" modified="Tue Aug 10 16:48:34 BRT 2021" modifiedBy="Breno" name="xxx_dim_Modulo" revision="1.49" showComponentDetails="true">
+<Global>
+<Metadata fileURL="${META_DIR}/obj_dto.fmt" id="Metadata3"/>
+<Metadata id="Metadata0" previewAttachmentCharset="ISO-8859-1">
+<Record fieldDelimiter="," name="Modulo_Input" previewAttachmentCharset="ISO-8859-1" recordDelimiter="\n" type="delimited">
+<Field name="Modulo" type="string"/>
+<Field name="Tabela" type="string"/>
+</Record>
+</Metadata>
+<Metadata id="Metadata1" previewAttachmentCharset="ISO-8859-1">
+<Record fieldDelimiter="," name="Modulo_Output" previewAttachmentCharset="ISO-8859-1" recordDelimiter="\n" type="delimited">
+<Field name="Modulo" type="string"/>
+<Field name="Tabela" type="string"/>
+<Field name="Chave_Modulo" type="string"/>
+</Record>
+</Metadata>
+<Property fileURL="workspace.prm" id="GraphParameter0"/>
+<Note alignment="1" backgroundColorB="225" backgroundColorG="255" backgroundColorR="255" enabled="true" folded="false" height="172" id="Note0" textColorB="0" textColorG="0" textColorR="0" textFontSize="8" title="1. CARGA DO DATASET DE MÓDULO (DIM)" titleColorB="0" titleColorG="0" titleColorR="0" titleFontSize="10" width="629" x="8" y="10"/>
+<Dictionary/>
+</Global>
+<Phase number="10">
+<Node enabled="enabled" guiName="DataGenerator" guiX="24" guiY="66" id="DATA_GENERATOR" recordsNumber="6" type="DATA_GENERATOR">
+<attr name="generate"><![CDATA[//#CTL2
+integer i = 0;
+
+// Generates output record.
+function integer generate() {
+	i = i + 1;
+	
+	switch(i) {
+		case 1:
+			$out.0.Modulo = 'TMS';
+			$out.0.Tabela = 'INDENIZACAO TRANSPORTE';
+			break;
+		case 2:
+			$out.0.Modulo = 'TMS';
+			$out.0.Tabela = 'MOVIMENTACAO CARGA';
+			break;
+		case 3:
+			$out.0.Modulo = 'TMS';
+			$out.0.Tabela = 'OCORRENCIAS TRANSPORTE';
+			break;
+		case 4:
+			$out.0.Modulo = 'TMS';
+			$out.0.Tabela = 'PERFORMANCE ENTREGA';
+			break;
+		case 5:
+			$out.0.Modulo = 'TMS';
+			$out.0.Tabela = 'RECEITA TRANSPORTADORA';
+			break;
+		case 6:
+			$out.0.Modulo = 'TMS';
+			$out.0.Tabela = 'TMS';
+			break;
+	}
+	
+	return ALL;
+}
+
+// Called during component initialization.
+// function boolean init() {}
+
+// Called during each graph run before the transform is executed. May be used to allocate and initialize resources
+// required by the generate. All resources allocated within this method should be released
+// by the postExecute() method.
+// function void preExecute() {}
+
+// Called only if generate() throws an exception.
+// function integer generateOnError(string errorMessage, string stackTrace) {
+// }
+
+// Called during each graph run after the entire transform was executed. Should be used to free any resources
+// allocated within the preExecute() method.
+// function void postExecute() {}
+
+// Called to return a user-defined error message when an error occurs.
+// function string getMessage() {}
+]]></attr>
+</Node>
+<Node dataset="dataset.modulo" datasetFieldMappings="{&quot;gd_dataset&quot;:{&quot;datasetId&quot;:&quot;dataset.modulo&quot;,&quot;datasetTitle&quot;:&quot;Módulo&quot;,&quot;attributes&quot;:[{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.modulo.iddomodulo&quot;,&quot;title&quot;:&quot;Id do módulo&quot;,&quot;prettyId&quot;:&quot;attr_modulo_iddomodulo&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.modulo.iddomodulo&quot;,&quot;title&quot;:&quot;Id do módulo&quot;,&quot;prettyId&quot;:&quot;iddomodulo&quot;,&quot;assignedMetadataField&quot;:&quot;Chave_Modulo&quot;,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}}],&quot;assignedMetadataField&quot;:null,&quot;selectedDisplayForm&quot;:null}},{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.modulo.nomedatabeladomodulo&quot;,&quot;title&quot;:&quot;Nome da tabela do módulo&quot;,&quot;prettyId&quot;:&quot;attr_modulo_nomedatabeladomodulo&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.modulo.nomedatabeladomodulo&quot;,&quot;title&quot;:&quot;Nome da tabela do módulo&quot;,&quot;prettyId&quot;:&quot;nomedatabeladomodulo&quot;,&quot;assignedMetadataField&quot;:&quot;Tabela&quot;,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}}],&quot;assignedMetadataField&quot;:null,&quot;selectedDisplayForm&quot;:null}},{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.modulo.nomedomodulo&quot;,&quot;title&quot;:&quot;Nome do módulo&quot;,&quot;prettyId&quot;:&quot;attr_modulo_nomedomodulo&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.modulo.nomedomodulo&quot;,&quot;title&quot;:&quot;Nome do módulo&quot;,&quot;prettyId&quot;:&quot;nomedomodulo&quot;,&quot;assignedMetadataField&quot;:&quot;Modulo&quot;,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}}],&quot;assignedMetadataField&quot;:null,&quot;selectedDisplayForm&quot;:null}}],&quot;referencedAttributes&quot;:[],&quot;dateAttributes&quot;:[],&quot;simpleFacts&quot;:[],&quot;dateFacts&quot;:[],&quot;entitiesWithoutValue&quot;:[],&quot;entitiesWithoutMetadata&quot;:[],&quot;datesWithFactConflict&quot;:[],&quot;unassigneddateFacts&quot;:[],&quot;fieldsWithMetadataConflict&quot;:[]}}" enabled="enabled" guiName="Módulo" guiX="491" guiY="66" id="MODULO" mode="${LOAD_MODE_DIM}" retriesInterval="60" retriesNumber="5" type="GD_DATASET_WRITER"/>
+<Node enabled="disabled" guiName="Trash" guiX="344" guiY="62" id="TRASH" type="TRASH"/>
+<Node enabled="enabled" guiName="Treatment" guiX="191" guiY="66" id="TREATMENT" type="REFORMAT">
+<attr name="transform"><![CDATA[//#CTL2
+import "trans/lib.ctl";
+
+// Transforms input record into output record.
+function integer transform() {
+	$out.0.Modulo = formatString($in.0.Modulo, null);
+	$out.0.Tabela = formatString($in.0.Tabela, null);
+	$out.0.Chave_Modulo = $out.0.Modulo + '|' + $out.0.Tabela;
+	
+	return ALL;
+}
+
+// Called during component initialization.
+// function boolean init() {}
+
+// Called during each graph run before the transform is executed. May be used to allocate and initialize resources
+// required by the transform. All resources allocated within this method should be released
+// by the postExecute() method.
+// function void preExecute() {}
+
+// Called only if transform() throws an exception.
+// function integer transformOnError(string errorMessage, string stackTrace) {}
+
+// Called during each graph run after the entire transform was executed. Should be used to free any resources
+// allocated within the preExecute() method.
+// function void postExecute() {}
+
+// Called to return a user-defined error message when an error occurs.
+// function string getMessage() {}
+]]></attr>
+</Node>
+<Edge debugMode="true" fromNode="DATA_GENERATOR:0" guiBendpoints="" guiRouter="Manhattan" id="Edge0" inPort="Port 0 (in)" metadata="Metadata0" outPort="Port 0 (out)" toNode="TREATMENT:0"/>
+<Edge debugMode="true" fromNode="TREATMENT:0" guiBendpoints="" guiRouter="Manhattan" id="Edge1" inPort="Port 0 (in)" metadata="Metadata1" outPort="Port 0 (out)" toNode="MODULO:0"/>
+</Phase>
+</Graph>

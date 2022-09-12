@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><Record fieldDelimiter="|" label="Estados.csv" name="Input_Estados" previewAttachment="${DATA_GOODDATA_DIR}/Estados.csv" previewAttachmentCharset="ISO-8859-1" quoteChar="&quot;" quotedStrings="true" recordDelimiter="\r\n" skipSourceRows="1" type="delimited">
+<Field name="Codigo_Localizacao" type="string"/>
+<Field name="Estado" type="string"/>
+<Field name="Regiao" type="string"/>
+<Field eofAsDelimiter="false" name="Sigla" type="string"/>
+</Record>

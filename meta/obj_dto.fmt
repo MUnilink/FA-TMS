@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?><Record fieldDelimiter="," name="obj_dto" previewAttachmentCharset="ISO-8859-1" quotedStrings="true" recordDelimiter="\n" type="delimited">
+<Field name="Data" type="date"/>
+<Field name="Offset_seconds" type="integer"/>
+</Record>

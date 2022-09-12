@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><Graph author="isabela.lourencini" created="Thu Dec 20 09:45:28 BRST 2018" guiVersion="3.4.4.P" id="1545312668311" licenseType="Commercial" modified="Tue Aug 10 14:16:05 BRT 2021" modifiedBy="Breno" name="tms_dim_NegociacaoTransporte" revision="1.30" showComponentDetails="true">
+<Global>
+<Metadata fileURL="${META_DIR}/obj_dto.fmt" id="Metadata3"/>
+<Metadata id="Metadata0" previewAttachment="zip:(${DATA_SOURCE_DIR}/CSV - TMS.zip)#Negociacao Transporte.csv" previewAttachmentCharset="ISO-8859-1">
+<Record fieldDelimiter="," label="zip:(./data/source/CSV - TMS.zip)#Negociacao Transporte.csv" name="Negociacao_Transporte_Input" previewAttachmentCharset="ISO-8859-1" quoteChar="&quot;" quotedStrings="true" recordDelimiter="\n" skipSourceRows="1" type="delimited">
+<Field name="BK_NEGOCIACAO" type="string"/>
+<Field name="CODNEG" type="string"/>
+<Field eofAsDelimiter="false" name="DES_NEGOCI" type="string"/>
+<Field name="INSTANCIA" type="string"/>
+</Record>
+</Metadata>
+<Metadata id="Metadata1" previewAttachment="zip:(${DATA_SOURCE_DIR}/CSV - TMS.zip)#Negociacao Transporte.csv" previewAttachmentCharset="ISO-8859-1">
+<Record fieldDelimiter="," label="zip:(./data/source/CSV - TMS.zip)#Negociacao Transporte.csv" name="Negociacao_Transporte_Output" previewAttachmentCharset="ISO-8859-1" quoteChar="&quot;" quotedStrings="true" recordDelimiter="\n" skipSourceRows="1" type="delimited">
+<Field name="BK_NEGOCIACAO" type="string"/>
+<Field name="CODNEG" type="string"/>
+<Field eofAsDelimiter="false" name="DES_NEGOCI" type="string"/>
+<Field name="INSTANCIA" type="string"/>
+</Record>
+</Metadata>
+<Property fileURL="workspace.prm" id="GraphParameter0"/>
+<Sequence cached="8" id="Sequence0" name="SequenciaHom" start="1" step="1" type="PRIMITIVE_SEQUENCE"/>
+<Note alignment="1" backgroundColorB="225" backgroundColorG="255" backgroundColorR="255" enabled="true" folded="false" height="139" id="Note0" textColorB="0" textColorG="0" textColorR="0" textFontSize="8" title="1. CARGA DO DATASET NEGOCIAÇÃO TRANSPORTE (DIMENSÃO)" titleColorB="0" titleColorG="0" titleColorR="0" titleFontSize="10" width="608" x="13" y="15"/>
+<Dictionary/>
+</Global>
+<Phase number="10">
+<Node charset="ISO-8859-1" enabled="enabled" fileURL="zip:(${DATA_SOURCE_DIR}/${gdc_agent_zip})#TMS Negociacao Transporte.csv*" guiName="Negociação Transporte" guiX="31" guiY="53" id="NEGOCIACAO_TRANSPORTE" type="DATA_READER"/>
+<Node dataset="dataset.negociacaotransporte" datasetFieldMappings="{&quot;gd_dataset&quot;:{&quot;datasetId&quot;:&quot;dataset.negociacaotransporte&quot;,&quot;datasetTitle&quot;:&quot;Negociação Transporte&quot;,&quot;attributes&quot;:[{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.negociacaotransporte.codigonegociacao&quot;,&quot;title&quot;:&quot;Código Negociação&quot;,&quot;prettyId&quot;:&quot;attr_negociacaotransporte_codigonegociacao&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.negociacaotransporte.codigonegociacao&quot;,&quot;title&quot;:&quot;Código Negociação&quot;,&quot;prettyId&quot;:&quot;codigonegociacao&quot;,&quot;assignedMetadataField&quot;:&quot;CODNEG&quot;,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}}],&quot;assignedMetadataField&quot;:null,&quot;selectedDisplayForm&quot;:null}},{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.negociacaotransporte.descricaonegociacao&quot;,&quot;title&quot;:&quot;Descrição Negociação&quot;,&quot;prettyId&quot;:&quot;attr_negociacaotransporte_descricaonegociacao&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.negociacaotransporte.descricaonegociacao&quot;,&quot;title&quot;:&quot;Descrição Negociação&quot;,&quot;prettyId&quot;:&quot;descricaonegociacao&quot;,&quot;assignedMetadataField&quot;:&quot;DES_NEGOCI&quot;,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}}],&quot;assignedMetadataField&quot;:null,&quot;selectedDisplayForm&quot;:null}},{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.negociacaotransporte.idnegociacao&quot;,&quot;title&quot;:&quot;ID Negociação&quot;,&quot;prettyId&quot;:&quot;attr_negociacaotransporte_idnegociacao&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.negociacaotransporte.idnegociacao&quot;,&quot;title&quot;:&quot;ID Negociação&quot;,&quot;prettyId&quot;:&quot;idnegociacao&quot;,&quot;assignedMetadataField&quot;:&quot;BK_NEGOCIACAO&quot;,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}}],&quot;assignedMetadataField&quot;:null,&quot;selectedDisplayForm&quot;:null}}],&quot;referencedAttributes&quot;:[{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.instancia.iddainstancia&quot;,&quot;title&quot;:&quot;Id da Instância&quot;,&quot;prettyId&quot;:&quot;attr_instancia_iddainstancia&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.instancia.iddainstancia&quot;,&quot;title&quot;:&quot;Id da Instância&quot;,&quot;prettyId&quot;:&quot;instancia__iddainstancia&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:false}}],&quot;assignedMetadataField&quot;:&quot;INSTANCIA&quot;,&quot;selectedDisplayForm&quot;:{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.instancia.iddainstancia&quot;,&quot;title&quot;:&quot;Id da Instância&quot;,&quot;prettyId&quot;:&quot;instancia__iddainstancia&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:false}}}}],&quot;dateAttributes&quot;:[],&quot;simpleFacts&quot;:[],&quot;dateFacts&quot;:[],&quot;unassigneddateFacts&quot;:[],&quot;entitiesWithoutMetadata&quot;:[],&quot;entitiesWithoutValue&quot;:[],&quot;datesWithFactConflict&quot;:[],&quot;fieldsWithMetadataConflict&quot;:[]}}" enabled="enabled" guiName="Negociação Transporte" guiX="433" guiY="51" id="NEGOCIACAO_TRANSPORTE2" mode="${LOAD_MODE_DIM}" retriesInterval="60" retriesNumber="5" type="GD_DATASET_WRITER"/>
+<Node enabled="enabled" guiName="Tratament" guiX="245" guiY="51" id="TRATAMENT" type="REFORMAT">
+<attr name="transform"><![CDATA[//#CTL2
+import "trans/lib.ctl";
+// Transforms input record into output record.
+function integer transform() {
+
+	$out.0.BK_NEGOCIACAO = formatKey($in.0.BK_NEGOCIACAO, true);
+	$out.0.CODNEG = formatString($in.0.CODNEG, null);
+	$out.0.DES_NEGOCI = formatString($in.0.DES_NEGOCI, null);
+	$out.0.INSTANCIA = formatKey($in.0.INSTANCIA, true);
+	
+	return ALL;
+}
+
+// Called during component initialization.
+// function boolean init() {}
+
+// Called during each graph run before the transform is executed. May be used to allocate and initialize resources
+// required by the transform. All resources allocated within this method should be released
+// by the postExecute() method.
+// function void preExecute() {}
+
+// Called only if transform() throws an exception.
+// function integer transformOnError(string errorMessage, string stackTrace) {}
+
+// Called during each graph run after the entire transform was executed. Should be used to free any resources
+// allocated within the preExecute() method.
+// function void postExecute() {}
+
+// Called to return a user-defined error message when an error occurs.
+// function string getMessage() {}
+]]></attr>
+</Node>
+<Edge debugMode="true" fromNode="NEGOCIACAO_TRANSPORTE:0" guiBendpoints="" guiRouter="Manhattan" id="Edge0" inPort="Port 0 (in)" metadata="Metadata0" outPort="Port 0 (output)" toNode="TRATAMENT:0"/>
+<Edge debugMode="true" fromNode="TRATAMENT:0" guiBendpoints="" guiRouter="Manhattan" id="Edge2" inPort="Port 0 (in)" metadata="Metadata1" outPort="Port 0 (out)" toNode="NEGOCIACAO_TRANSPORTE2:0"/>
+</Phase>
+</Graph>
