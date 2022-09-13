@@ -1,6 +1,45 @@
-<?xml version="1.0" encoding="UTF-8"?><Graph author="Manoel" created="Tue Sep 13 09:47:31 BRT 2022" guiVersion="3.4.4.P" id="1663090404481" licenseCode="CLP1DGOODD71636137BY" licenseType="Commercial" modified="Tue Sep 13 09:47:31 BRT 2022" modifiedBy="Manoel" name="tms_dim_motoristas" revision="1.0" showComponentDetails="true">
+<?xml version="1.0" encoding="UTF-8"?><Graph author="Manoel" created="Tue Sep 13 09:47:31 BRT 2022" guiVersion="3.4.4.P" id="1663090404481" licenseType="Commercial" modified="Tue Sep 13 14:37:10 BRT 2022" modifiedBy="Manoel" name="tms_dim_motoristas" revision="1.1" showComponentDetails="true">
 <Global>
 <Property fileURL="workspace.prm" id="GraphParameter0"/>
 <Dictionary/>
 </Global>
+<Phase number="0">
+<Node dataset="dataset.pessoal" enabled="enabled" guiName="Carrega (L) os motoristas do TMS" guiX="679" guiY="91" id="CARREGA_L_OS_MOTORISTAS_DO_TMS" retriesInterval="60" retriesNumber="5" type="GD_DATASET_WRITER"/>
+<Node enabled="enabled" fileURL="zip:(${DATA_SOURCE_DIR}/${gdc_agent_zip})#motoristas.csv*" guiName="Lê (E) os motoristas do TMS" guiX="27" guiY="78" id="LE_E_OS_MOTORISTAS_DO_TMS" type="DATA_READER"/>
+</Phase>
+<Phase number="10">
+<Node enabled="enabled" guiName="Transforma (T) os dados" guiX="381" guiY="91" id="TRANSFORMA_T_OS_DADOS" type="REFORMAT">
+<attr name="transform"><![CDATA[//#CTL2
+import "trans/lib.ctl";
+// Transforms input record into output record.
+function integer transform() {	
+
+	$out.0.BK_SERVICO = formatKey($in.0.BK_SERVICO, true);
+	$out.0.COD_SERVICO = formatString($in.0.COD_SERVICO, null);
+	$out.0.DES_SERVICO = formatString($in.0.DES_SERVICO, null);
+	$out.0.INSTANCIA = formatKey($in.0.INSTANCIA, true);
+	
+	return ALL;
+}
+
+// Called during component initialization.
+// function boolean init() {}
+
+// Called during each graph run before the transform is executed. May be used to allocate and initialize resources
+// required by the transform. All resources allocated within this method should be released
+// by the postExecute() method.
+// function void preExecute() {}
+
+// Called only if transform() throws an exception.
+// function integer transformOnError(string errorMessage, string stackTrace) {}
+
+// Called during each graph run after the entire transform was executed. Should be used to free any resources
+// allocated within the preExecute() method.
+// function void postExecute() {}
+
+// Called to return a user-defined error message when an error occurs.
+// function string getMessage() {}
+]]></attr>
+</Node>
+</Phase>
 </Graph>
