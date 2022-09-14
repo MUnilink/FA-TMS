@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?><Graph author="Manoel" created="Tue Sep 13 09:47:31 BRT 2022" guiVersion="3.4.4.P" id="1663090404481" licenseType="Commercial" modified="Tue Sep 13 14:37:10 BRT 2022" modifiedBy="Manoel" name="tms_dim_motoristas" revision="1.1" showComponentDetails="true">
+<?xml version="1.0" encoding="UTF-8"?><Graph author="Manoel" created="Tue Sep 13 09:47:31 BRT 2022" guiVersion="3.4.4.P" id="1663090404481" licenseType="Commercial" modified="Wed Sep 14 15:44:04 BRT 2022" modifiedBy="Manoel" name="tms_dim_motoristas" revision="1.2" showComponentDetails="true">
 <Global>
 <Property fileURL="workspace.prm" id="GraphParameter0"/>
 <Dictionary/>
 </Global>
 <Phase number="0">
 <Node dataset="dataset.pessoal" enabled="enabled" guiName="Carrega (L) os motoristas do TMS" guiX="679" guiY="91" id="CARREGA_L_OS_MOTORISTAS_DO_TMS" retriesInterval="60" retriesNumber="5" type="GD_DATASET_WRITER"/>
-<Node enabled="enabled" fileURL="zip:(${DATA_SOURCE_DIR}/${gdc_agent_zip})#motoristas.csv*" guiName="Lê (E) os motoristas do TMS" guiX="27" guiY="78" id="LE_E_OS_MOTORISTAS_DO_TMS" type="DATA_READER"/>
+<Node enabled="enabled" fileURL="${DATA_SOURCE_DIR}/motoristasTMS.csv" guiName="Lê (E) os motoristas do TMS" guiX="27" guiY="78" id="LE_E_OS_MOTORISTAS_DO_TMS" type="DATA_READER"/>
 </Phase>
 <Phase number="10">
 <Node enabled="enabled" guiName="Transforma (T) os dados" guiX="381" guiY="91" id="TRANSFORMA_T_OS_DADOS" type="REFORMAT">
