@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><Graph author="Manoel" created="Thu Sep 15 14:54:07 BRT 2022" guiVersion="3.4.4.P" id="1663328841722" licenseType="Commercial" modified="Sat Sep 17 08:59:45 BRT 2022" modifiedBy="Manoel" name="tms_dim_viagens" revision="1.2" showComponentDetails="true">
+<Global>
+<Property fileURL="workspace.prm" id="GraphParameter0"/>
+<Dictionary/>
+</Global>
+<Phase number="0">
+<Node enabled="enabled" guiName="Carrega (L) os dados" guiX="748" guiY="76" id="CARREGA_L_OS_DADOS" retriesInterval="60" retriesNumber="5" type="GD_DATASET_WRITER"/>
+<Node enabled="enabled" fileURL="zip:(${DATA_SOURCE_DIR}/${gdc_agent_zip})#viagem.csv*" guiName="Lê (E) as viagens" guiX="81" guiY="76" id="LE_E_AS_VIAGENS" type="DATA_READER"/>
+<Node enabled="enabled" guiName="Transforma (T) os dados" guiX="422" guiY="76" id="TRANSFORMA_T_OS_DADOS" type="REFORMAT"/>
+</Phase>
+</Graph>
