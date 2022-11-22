@@ -53,9 +53,9 @@ function integer getTimezoneOffset(string timezone) {
 }
 
 // Função que retorna o número de segundos passados em determinada data/hora.
-function objdto getSecondsFromTime(date data) {
+function obj_dto getSecondsFromTime(date data) {
 	
-	objdto dto;
+	obj_dto dto;
 	
 	//Calcula o ajuste de fuso horário de acordo com a configuração de data/hora do servidor de aplicação.
     integer offset = DATE_TIMEZONE_OFFSET - getTimezoneOffset(date2str(data, "Z", "${DATE_LOCALE}"));
