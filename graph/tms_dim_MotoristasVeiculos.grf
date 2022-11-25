@@ -1,5 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?><Graph author="Manoel" created="Tue Sep 13 09:47:31 BRT 2022" guiVersion="3.4.4.P" id="1663090404481" licenseType="Commercial" modified="Wed Nov 23 12:53:47 BRST 2022" modifiedBy="Manoel" name="tms_dim_motoristas" revision="1.28" showComponentDetails="true">
+<?xml version="1.0" encoding="UTF-8"?><Graph author="Manoel" created="Tue Sep 13 09:47:31 BRT 2022" guiVersion="3.4.4.P" id="1663090404481" licenseType="Commercial" modified="Fri Nov 25 09:33:01 BRST 2022" modifiedBy="Manoel" name="tms_dim_motoristas" revision="1.29" showComponentDetails="true">
 <Global>
+<Metadata fileURL="${META_DIR}/obj_dto.fmt" id="Metadata64"/>
 <Metadata id="Metadata3" previewAttachmentCharset="ISO-8859-1">
 <Record fieldDelimiter="," name="motoristasTMS_csv" previewAttachmentCharset="ISO-8859-1" recordDelimiter="\r\n" type="delimited">
 <Field name="DA4_COD" type="string"/>
