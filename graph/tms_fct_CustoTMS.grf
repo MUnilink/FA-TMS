@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><Graph author="Manoel" created="Thu Sep 15 14:54:07 BRT 2022" guiVersion="3.4.4.P" id="1663424426840" licenseType="Commercial" modified="Sat Sep 17 11:21:04 BRT 2022" modifiedBy="Manoel" name="tms_fct_CustoTMS" revision="1.1" showComponentDetails="true">
-<Global>
-<Property fileURL="workspace.prm" id="GraphParameter0"/>
-<Dictionary/>
-</Global>
-<Phase number="0">
-<Node enabled="enabled" guiName="Lê (E) os dados" guiX="118" guiY="105" id="LE_E_OS_DADOS" type="DATA_READER"/>
-</Phase>
-</Graph>
