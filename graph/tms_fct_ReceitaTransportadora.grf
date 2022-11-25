@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><Graph author="isabela.lourencini" created="Thu Dec 20 09:45:28 BRST 2018" guiVersion="3.4.4.P" id="1545312668311" licenseType="Commercial" modified="Fri Nov 25 14:53:26 BRST 2022" modifiedBy="Manoel" name="tms_fct_ReceitaTransportadora" revision="1.39" showComponentDetails="true">
+<?xml version="1.0" encoding="UTF-8"?><Graph author="isabela.lourencini" created="Thu Dec 20 09:45:28 BRST 2018" guiVersion="3.4.4.P" id="1545312668311" licenseType="Commercial" modified="Fri Nov 25 16:02:03 BRST 2022" modifiedBy="Manoel" name="tms_fct_ReceitaTransportadora" revision="1.40" showComponentDetails="true">
 <Global>
 <Metadata fileURL="${META_DIR}/_2Dates.fmt" id="Metadata2"/>
 <Metadata fileURL="${META_DIR}/obj_dto.fmt" id="Metadata1"/>
@@ -35,7 +35,6 @@
 <Field label="VALOR_COMPONENTE" name="VALOR_COMPONENTE" type="string"/>
 <Field label="VALOR_IMPOSTO" name="VALOR_IMPOSTO" type="string"/>
 <Field eofAsDelimiter="false" label="VALOR_TOTAL" name="VALOR_TOTAL" type="string"/>
-<Field name="BK_MOEDA" type="string"/>
 <Field name="INSTANCIA" type="string"/>
 <Field name="ID_VIAGEM" type="string"/>
 </Record>
