@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><Graph author="mateus.romero" created="Tue Nov 21 06:08:43 CST 2017" guiVersion="3.4.4.P" id="1511273164594" licenseType="Commercial" modified="Fri Nov 25 09:39:58 BRST 2022" modifiedBy="Manoel" name="_Main" revision="1.108" showComponentDetails="true">
+<?xml version="1.0" encoding="UTF-8"?><Graph author="mateus.romero" created="Tue Nov 21 06:08:43 CST 2017" guiVersion="3.4.4.P" id="1511273164594" licenseType="Commercial" modified="Fri Nov 25 12:06:22 BRST 2022" modifiedBy="Manoel" name="_Main" revision="1.109" showComponentDetails="true">
 <Global>
 <Property fileURL="workspace.prm" id="GraphParameter0"/>
 <Note alignment="1" backgroundColorB="225" backgroundColorG="255" backgroundColorR="255" enabled="true" folded="false" height="186" id="Note1" textColorB="0" textColorG="0" textColorR="0" textFontSize="8" title="DOWNLOAD DOS ARQUIVOS" titleColorB="0" titleColorG="0" titleColorR="0" titleFontSize="10" width="229" x="16" y="31"/>
@@ -10,7 +10,10 @@
 <Phase number="0">
 <Node baseURL="https://${USER_PWD_SECURE_DI}@secure-di.gooddata.com/project-uploads/${GDC_PROJECT_ID}/today/${gdc_agent_zip}" destination="${DATA_SOURCE_DIR}" enabled="enabled" guiName="DOWNLOAD" guiX="67" guiY="103" id="DOWNLOAD" type="FILE_DOWNLOAD"/>
 </Phase>
-<Phase number="1">
+<Phase number="2">
+<Node enabled="enabled" graphName="${GRAPH_DIR}/tms_dim_MotoristasVeiculos.grf" guiName="Motoristas e veículos do TMS" guiX="279" guiY="90" id="MOTORISTAS_E_VEICULOS_DO_TMS" type="RUN_GRAPH"/>
+</Phase>
+<Phase number="4">
 <Node enabled="enabled" graphName="${GRAPH_DIR}/xxx_dim_Cliente.grf" guiName="Cliente" guiX="731" guiY="396" id="CLIENTE" paramsToPass="gdc_agent_zip;LOAD_MODE_FCT;LOAD_MODE_DIM;NUMBER_LOCALE;NUMBER_PATTERN;NUMBER_MAXSIZE;DATE_LOCALE;DATE_PATTERN;MONTHS_TO_LOAD;DEMO_MODE;DEMO_DATE;DATE_TIMEZONE" type="RUN_GRAPH"/>
 <Node enabled="enabled" graphName="${GRAPH_DIR}/tms_dim_ComponenteFrete.grf" guiName="Componente Frete" guiX="580" guiY="396" id="COMPONENTE_FRETE" paramsToPass="gdc_agent_zip;LOAD_MODE_FCT;LOAD_MODE_DIM;NUMBER_LOCALE;NUMBER_PATTERN;NUMBER_MAXSIZE;DATE_LOCALE;DATE_PATTERN;MONTHS_TO_LOAD;DEMO_MODE;DEMO_DATE;DATE_TIMEZONE" type="RUN_GRAPH"/>
 <Node enabled="enabled" graphName="${GRAPH_DIR}/tms_dim_Documento.grf" guiName="Documento" guiX="282" guiY="194" id="DOCUMENTO" paramsToPass="gdc_agent_zip;LOAD_MODE_FCT;LOAD_MODE_DIM;NUMBER_LOCALE;NUMBER_PATTERN;NUMBER_MAXSIZE;DATE_LOCALE;DATE_PATTERN;MONTHS_TO_LOAD;DEMO_MODE;DEMO_DATE;DATE_TIMEZONE" type="RUN_GRAPH"/>
@@ -29,12 +32,7 @@
 <Node enabled="enabled" graphName="${GRAPH_DIR}/tms_dim_StatusdeIndenizacaodoTransporte.grf" guiName="Status Indenização" guiX="282" guiY="396" id="STATUS_INDENIZACAO" paramsToPass="gdc_agent_zip;LOAD_MODE_FCT;LOAD_MODE_DIM;NUMBER_LOCALE;NUMBER_PATTERN;NUMBER_MAXSIZE;DATE_LOCALE;DATE_PATTERN;MONTHS_TO_LOAD;DEMO_MODE;DEMO_DATE;DATE_TIMEZONE" type="RUN_GRAPH"/>
 <Node enabled="enabled" graphName="${GRAPH_DIR}/tms_dim_TipoDocumentodoTransporte.grf" guiName="Tipo Documento" guiX="431" guiY="497" id="TIPO_DOCUMENTO" paramsToPass="gdc_agent_zip;LOAD_MODE_FCT;LOAD_MODE_DIM;NUMBER_LOCALE;NUMBER_PATTERN;NUMBER_MAXSIZE;DATE_LOCALE;DATE_PATTERN;MONTHS_TO_LOAD;DEMO_MODE;DEMO_DATE;DATE_TIMEZONE" type="RUN_GRAPH"/>
 <Node enabled="enabled" graphName="${GRAPH_DIR}/tms_dim_TipodoTransporte.grf" guiName="Tipo Transporte" guiX="282" guiY="497" id="TIPO_TRANSPORTE" paramsToPass="gdc_agent_zip;LOAD_MODE_FCT;LOAD_MODE_DIM;NUMBER_LOCALE;NUMBER_PATTERN;NUMBER_MAXSIZE;DATE_LOCALE;DATE_PATTERN;MONTHS_TO_LOAD;DEMO_MODE;DEMO_DATE;DATE_TIMEZONE" type="RUN_GRAPH"/>
-</Phase>
-<Phase number="2">
 <Node enabled="enabled" graphName="${GRAPH_DIR}/tms_dim_viagens.grf" guiName="Viagens" guiX="498" guiY="90" id="VIAGENS" type="RUN_GRAPH"/>
-</Phase>
-<Phase number="4">
-<Node enabled="enabled" graphName="${GRAPH_DIR}/tms_dim_MotoristasVeiculos.grf" guiName="Motoristas e veículos do TMS" guiX="279" guiY="90" id="MOTORISTAS_E_VEICULOS_DO_TMS" type="RUN_GRAPH"/>
 </Phase>
 <Phase number="8">
 <Node enabled="enabled" graphName="${GRAPH_DIR}/tms_fct_MovimentacaoCarga.grf" guiName="Movimentação Carga" guiX="938" guiY="113" id="MOVIMENTACAO_CARGA" paramsToPass="gdc_agent_zip;LOAD_MODE_FCT;LOAD_MODE_DIM;NUMBER_LOCALE;NUMBER_PATTERN;NUMBER_MAXSIZE;DATE_LOCALE;DATE_PATTERN;MONTHS_TO_LOAD;DEMO_MODE;DEMO_DATE;DATE_TIMEZONE" type="RUN_GRAPH"/>
