@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><Graph author="isabela.lourencini" created="Thu Dec 20 09:45:28 BRST 2018" guiVersion="3.4.4.P" id="1545312668311" licenseType="Commercial" modified="Fri Nov 25 16:02:03 BRST 2022" modifiedBy="Manoel" name="tms_fct_ReceitaTransportadora" revision="1.40" showComponentDetails="true">
+<?xml version="1.0" encoding="UTF-8"?><Graph author="isabela.lourencini" created="Thu Dec 20 09:45:28 BRST 2018" guiVersion="3.4.4.P" id="1545312668311" licenseType="Commercial" modified="Fri Nov 25 17:09:41 BRST 2022" modifiedBy="Manoel" name="tms_fct_ReceitaTransportadora" revision="1.41" showComponentDetails="true">
 <Global>
 <Metadata fileURL="${META_DIR}/_2Dates.fmt" id="Metadata2"/>
 <Metadata fileURL="${META_DIR}/obj_dto.fmt" id="Metadata1"/>
@@ -180,10 +180,9 @@ function integer transform() {
 	$out.0.VALOR_IMPOSTO = formatDecimal($in.0.VALOR_IMPOSTO, true);
 	$out.0.VALOR_TOTAL = formatDecimal($in.0.VALOR_TOTAL, true);
 	$out.0.DATA_EMISSAO = formatDate($in.0.DATA_EMISSAO);
-	
-	$out.0.PK_MODULO = formatString('TMS|RECEITA TRANSPORTADORA', null);
-	$out.0.ID_VIAGEM = formatString($in.0.ID_VIAGEM, null);
+	$out.0.ID_VIAGEM = formatString($in.0.ID_VIAGEM, null);	
 
+	$out.0.PK_MODULO = formatString('TMS|RECEITA TRANSPORTADORA', null);
 	return ALL;
 }
 
