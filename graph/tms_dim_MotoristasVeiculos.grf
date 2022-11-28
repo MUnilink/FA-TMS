@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><Graph author="Manoel" created="Tue Sep 13 09:47:31 BRT 2022" guiVersion="3.4.4.P" id="1663090404481" licenseType="Commercial" modified="Mon Nov 28 14:49:15 BRST 2022" modifiedBy="Manoel" name="tms_dim_motoristas" revision="1.41" showComponentDetails="true">
+<?xml version="1.0" encoding="UTF-8"?><Graph author="Manoel" created="Tue Sep 13 09:47:31 BRT 2022" guiVersion="3.4.4.P" id="1663090404481" licenseType="Commercial" modified="Mon Nov 28 16:31:13 BRST 2022" modifiedBy="Manoel" name="tms_dim_motoristas" revision="1.42" showComponentDetails="true">
 <Global>
 <Metadata fileURL="${META_DIR}/obj_dto.fmt" id="Metadata64"/>
 <Metadata id="Metadata3" previewAttachmentCharset="ISO-8859-1">
@@ -30,11 +30,11 @@
 </Metadata>
 <Metadata id="Metadata0" previewAttachment="${DATA_SOURCE_DIR}/motoristasTMS.csv" previewAttachmentCharset="ISO-8859-1">
 <Record fieldDelimiter="," label="motoristasTMS.csv" name="veiculosTMS_csv" previewAttachment="${DATA_SOURCE_DIR}/motoristasTMS.csv" previewAttachmentCharset="ISO-8859-1" quoteChar="&quot;" quotedStrings="true" recordDelimiter="\n" skipSourceRows="1" type="delimited">
+<Field name="ID_VEI" type="string"/>
 <Field name="DA3_COD" type="string"/>
 <Field name="DA3_DESC" type="string"/>
 <Field eofAsDelimiter="false" name="DA3_PLACA" type="string"/>
 <Field name="INSTANCIA" type="string"/>
-<Field name="ID_VEI" type="string"/>
 </Record>
 </Metadata>
 <Property fileURL="workspace.prm" id="GraphParameter0"/>
