@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="UTF-8"?><Graph author="Manoel" created="Tue Sep 13 09:47:31 BRT 2022" guiVersion="3.4.4.P" id="1663090404481" licenseType="Commercial" modified="Mon Nov 28 12:33:33 BRST 2022" modifiedBy="Manoel" name="tms_dim_motoristas" revision="1.40" showComponentDetails="true">
+<?xml version="1.0" encoding="UTF-8"?><Graph author="Manoel" created="Tue Sep 13 09:47:31 BRT 2022" guiVersion="3.4.4.P" id="1663090404481" licenseType="Commercial" modified="Mon Nov 28 14:49:15 BRST 2022" modifiedBy="Manoel" name="tms_dim_motoristas" revision="1.41" showComponentDetails="true">
 <Global>
 <Metadata fileURL="${META_DIR}/obj_dto.fmt" id="Metadata64"/>
 <Metadata id="Metadata3" previewAttachmentCharset="ISO-8859-1">
 <Record fieldDelimiter="," name="motoristasTMS_csv" previewAttachmentCharset="ISO-8859-1" recordDelimiter="\r\n" type="delimited">
+<Field delimiter="\n" name="ID_MOT" type="string"/>
 <Field name="DA4_COD" type="string"/>
 <Field name="DA4_MAT" type="string"/>
 <Field name="DA4_NOME" type="string"/>
 <Field delimiter="," name="INSTANCIA" type="string"/>
-<Field delimiter="\n" name="ID_MOT" type="string"/>
 </Record>
 </Metadata>
 <Metadata id="Metadata1" previewAttachmentCharset="ISO-8859-1">
@@ -15,8 +15,8 @@
 <Field delimiter="," name="DA4_COD" type="string"/>
 <Field name="DA4_MAT" type="string"/>
 <Field delimiter="," name="DA4_NOME" type="string"/>
-<Field delimiter="\n" name="INSTANCIA" type="string"/>
-<Field name="ID_MOT" type="string"/>
+<Field delimiter="," name="INSTANCIA" type="string"/>
+<Field delimiter="\n" name="ID_MOT" type="string"/>
 </Record>
 </Metadata>
 <Metadata id="Metadata4" previewAttachment="${DATA_SOURCE_DIR}/motoristasTMS.csv" previewAttachmentCharset="ISO-8859-1">
