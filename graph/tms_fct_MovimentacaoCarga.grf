@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><Graph author="isabela.lourencini" created="Thu Dec 20 09:45:28 BRST 2018" guiVersion="3.4.4.P" id="1545312668311" licenseType="Commercial" modified="Tue Aug 10 14:44:56 BRT 2021" modifiedBy="Breno" name="tms_fct_MovimentacaoCarga" revision="1.51" showComponentDetails="true">
+<?xml version="1.0" encoding="UTF-8"?><Graph author="isabela.lourencini" created="Thu Dec 20 09:45:28 BRST 2018" guiVersion="3.4.4.P" id="1545312668311" licenseType="Commercial" modified="Tue Dec 06 14:43:10 BRST 2022" modifiedBy="Manoel" name="tms_fct_MovimentacaoCarga" revision="1.52" showComponentDetails="true">
 <Global>
 <Metadata fileURL="${META_DIR}/_2Dates.fmt" id="Metadata2"/>
 <Metadata fileURL="${META_DIR}/obj_dto.fmt" id="Metadata5"/>
@@ -34,7 +34,6 @@
 <Field name="VOLUME" type="string"/>
 <Field name="VALOR_MERCADORIA" type="string"/>
 <Field eofAsDelimiter="false" name="VALOR_TOTAL" type="string"/>
-<Field name="BK_MOEDA" type="string"/>
 <Field name="INSTANCIA" type="string"/>
 </Record>
 </Metadata>
