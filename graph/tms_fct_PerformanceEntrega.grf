@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><Graph author="isabela.lourencini" created="Thu Dec 20 09:45:28 BRST 2018" guiVersion="3.4.4.P" id="1545312668311" licenseType="Commercial" modified="Tue Aug 10 14:52:02 BRT 2021" modifiedBy="Breno" name="tms_fct_PerformanceEntrega" revision="1.56" showComponentDetails="true">
+<?xml version="1.0" encoding="UTF-8"?><Graph author="isabela.lourencini" created="Thu Dec 20 09:45:28 BRST 2018" guiVersion="3.4.4.P" id="1545312668311" licenseType="Commercial" modified="Tue Dec 06 14:36:40 BRST 2022" modifiedBy="Manoel" name="tms_fct_PerformanceEntrega" revision="1.57" showComponentDetails="true">
 <Global>
 <Metadata fileURL="${META_DIR}/_2Dates.fmt" id="Metadata2"/>
 <Metadata fileURL="${META_DIR}/obj_dto.fmt" id="Metadata5"/>
@@ -30,7 +30,6 @@
 <Field name="BK_REGIAO_DEV" type="string"/>
 <Field name="BK_REGIAO_CDRCAL" type="string"/>
 <Field eofAsDelimiter="false" name="BK_REGIAO_CDRORI" type="string"/>
-<Field name="BK_MOEDA" type="string"/>
 <Field name="INSTANCIA" type="string"/>
 </Record>
 </Metadata>
