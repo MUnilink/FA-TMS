@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><Graph author="isabela.lourencini" created="Mon Apr 01 09:32:46 BRT 2019" guiVersion="3.4.4.P" id="1554234771737" licenseType="Commercial" modified="Tue Aug 10 14:48:19 BRT 2021" modifiedBy="Breno" name="tms_fct_IndenizacaoTransporte" revision="1.37" showComponentDetails="true">
+<?xml version="1.0" encoding="UTF-8"?><Graph author="isabela.lourencini" created="Mon Apr 01 09:32:46 BRT 2019" guiVersion="3.4.4.P" id="1554234771737" licenseType="Commercial" modified="Tue Dec 06 14:40:47 BRST 2022" modifiedBy="Manoel" name="tms_fct_IndenizacaoTransporte" revision="1.38" showComponentDetails="true">
 <Global>
 <Metadata fileURL="${META_DIR}/_2Dates.fmt" id="Metadata2"/>
 <Metadata fileURL="${META_DIR}/obj_dto.fmt" id="Metadata0"/>
@@ -37,7 +37,6 @@
 <Field name="BK_REGIAO_DEV" type="string"/>
 <Field name="BK_REGIAO_CDRCAL" type="string"/>
 <Field eofAsDelimiter="false" name="BK_REGIAO_CDRORI" type="string"/>
-<Field name="BK_MOEDA" type="string"/>
 <Field name="INSTANCIA" type="string"/>
 </Record>
 </Metadata>
