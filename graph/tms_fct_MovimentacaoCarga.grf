@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><Graph author="isabela.lourencini" created="Thu Dec 20 09:45:28 BRST 2018" guiVersion="3.4.4.P" id="1545312668311" licenseType="Commercial" modified="Tue Dec 06 14:43:10 BRST 2022" modifiedBy="Manoel" name="tms_fct_MovimentacaoCarga" revision="1.52" showComponentDetails="true">
+<?xml version="1.0" encoding="UTF-8"?><Graph author="isabela.lourencini" created="Thu Dec 20 09:45:28 BRST 2018" guiVersion="3.4.4.P" id="1545312668311" licenseType="Commercial" modified="Wed Dec 07 12:08:00 BRST 2022" modifiedBy="Manoel" name="tms_fct_MovimentacaoCarga" revision="1.53" showComponentDetails="true">
 <Global>
 <Metadata fileURL="${META_DIR}/_2Dates.fmt" id="Metadata2"/>
 <Metadata fileURL="${META_DIR}/obj_dto.fmt" id="Metadata5"/>
@@ -170,10 +170,10 @@ function integer transform() {
 	$out.0.DATA_EMISSAO = formatDate($in.0.DATA_EMISSAO);
 	$out.0.PESO = formatDecimal($in.0.PESO, true);
 	$out.0.PESO_CUBADO = formatDecimal($in.0.PESO_CUBADO, true);
-	$out.0.VOLUME = formatDecimal($in.0.VOLUME, true);
-	$out.0.VALOR_TOTAL = formatDecimal($in.0.VALOR_TOTAL, true);
-	$out.0.VALOR_MERCADORIA = formatDecimal($in.0.VALOR_MERCADORIA, true);
 	$out.0.PESO_M3 = formatDecimal($in.0.PESO_M3, true);
+	$out.0.VOLUME = formatDecimal($in.0.VOLUME, true);
+	$out.0.VALOR_MERCADORIA = formatDecimal($in.0.VALOR_MERCADORIA, true);
+	$out.0.VALOR_TOTAL = formatDecimal($in.0.VALOR_TOTAL, true);
 	
 	$out.0.PK_MODULO = formatString('TMS|MOVIMENTACAO CARGA', null);
 
