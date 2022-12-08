@@ -1,6 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?><Graph author="Manoel" created="Tue Sep 13 09:47:31 BRT 2022" guiVersion="3.4.4.P" id="1663090404481" licenseType="Commercial" modified="Thu Dec 08 14:06:44 BRST 2022" modifiedBy="Manoel" name="tms_dim_motoristas" revision="1.43" showComponentDetails="true">
+<?xml version="1.0" encoding="UTF-8"?><Graph author="Manoel" created="Tue Sep 13 09:47:31 BRT 2022" guiVersion="3.4.4.P" id="1663090404481" licenseType="Commercial" modified="Thu Dec 08 15:33:06 BRST 2022" modifiedBy="Manoel" name="tms_dim_motoristas" revision="1.44" showComponentDetails="true">
 <Global>
 <Metadata fileURL="${META_DIR}/obj_dto.fmt" id="Metadata64"/>
+<Metadata id="Metadata2" previewAttachment="${DATA_SOURCE_DIR}/motoristasTMS.csv" previewAttachmentCharset="ISO-8859-1">
+<Record fieldDelimiter="," label="motoristasTMS.csv" name="motoristasTMS_6359a4a" previewAttachment="${DATA_SOURCE_DIR}/motoristasTMS.csv" previewAttachmentCharset="ISO-8859-1" quoteChar="&quot;" quotedStrings="true" recordDelimiter="\n" skipSourceRows="1" type="delimited">
+<Field name="ID_MOT" type="string"/>
+<Field name="DA4_COD" type="string"/>
+<Field name="DA4_MAT" type="string"/>
+<Field name="DA4_NOME" type="string"/>
+<Field eofAsDelimiter="false" name="INSTANCIA" type="string"/>
+</Record>
+</Metadata>
 <Metadata id="Metadata3" previewAttachmentCharset="ISO-8859-1">
 <Record fieldDelimiter="," name="motoristasTMS_csv" previewAttachmentCharset="ISO-8859-1" recordDelimiter="\r\n" type="delimited">
 <Field delimiter="," name="ID_MOT" type="string"/>
@@ -115,7 +124,7 @@ function integer transform() {
 // function string getMessage() {}
 ]]></attr>
 </Node>
-<Edge debugMode="true" fromNode="LE_E_OS_MOTORISTAS_DO_TMS:0" guiBendpoints="" guiRouter="Manhattan" id="Edge11" inPort="Port 0 (in)" metadata="Metadata3" outPort="Port 0 (output)" toNode="TRANSFORMA_T_OS_DADOS:0"/>
+<Edge debugMode="true" fromNode="LE_E_OS_MOTORISTAS_DO_TMS:0" guiBendpoints="" guiRouter="Manhattan" id="Edge11" inPort="Port 0 (in)" metadata="Metadata2" outPort="Port 0 (output)" toNode="TRANSFORMA_T_OS_DADOS:0"/>
 <Edge debugMode="true" fromNode="LE_E_OS_VEICULOS_DO_TMS:0" guiBendpoints="" guiRouter="Manhattan" id="Edge10" inPort="Port 0 (in)" metadata="Metadata0" outPort="Port 0 (output)" toNode="TRANSFORMA_T_OS_DADOS1:0"/>
 <Edge fromNode="SIMPLE_COPY:0" guiBendpoints="" guiRouter="Manhattan" id="Edge2" inPort="Port 0 (in)" metadata="Metadata4" outPort="Port 0 (out)" toNode="CARREGA_L_OS_CMS:0"/>
 <Edge fromNode="SIMPLE_COPY:1" guiBendpoints="" guiRouter="Manhattan" id="Edge3" inPort="Port 0 (in)" metadata="Metadata4" outPort="Port 1 (out)" toNode="CARREGA_L_O_RB1:0"/>
