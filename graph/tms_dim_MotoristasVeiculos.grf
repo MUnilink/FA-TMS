@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><Graph author="Manoel" created="Tue Sep 13 09:47:31 BRT 2022" guiVersion="3.4.4.P" id="1663090404481" licenseType="Commercial" modified="Thu Dec 08 15:33:06 BRST 2022" modifiedBy="Manoel" name="tms_dim_motoristas" revision="1.44" showComponentDetails="true">
+<?xml version="1.0" encoding="UTF-8"?><Graph author="Manoel" created="Tue Sep 13 09:47:31 BRT 2022" guiVersion="3.4.4.P" id="1663090404481" licenseType="Commercial" modified="Sat Dec 10 10:50:58 BRST 2022" modifiedBy="Manoel" name="tms_dim_motoristas" revision="1.46" showComponentDetails="true">
 <Global>
 <Metadata fileURL="${META_DIR}/obj_dto.fmt" id="Metadata64"/>
 <Metadata id="Metadata2" previewAttachment="${DATA_SOURCE_DIR}/motoristasTMS.csv" previewAttachmentCharset="ISO-8859-1">
@@ -63,12 +63,11 @@
 import "trans/lib.ctl";
 // Transforms input record into output record.
 function integer transform() {	
-
-	$out.0.ID_MOT = formatKey($in.0.ID_MOT, true);
 	$out.0.DA4_COD = formatString($in.0.DA4_COD, null);
 	$out.0.DA4_MAT = formatString($in.0.DA4_MAT, null);
 	$out.0.DA4_NOME = formatString($in.0.DA4_NOME, null);
 	$out.0.INSTANCIA = formatKey($in.0.INSTANCIA, true);
+	$out.0.ID_MOT = formatKey($in.0.ID_MOT, true);
 	return ALL;
 }
 
@@ -96,12 +95,11 @@ function integer transform() {
 import "trans/lib.ctl";
 // Transforms input record into output record.
 function integer transform() {	
-
-	$out.0.ID_VEI = formatKey($in.0.ID_VEI, true);
 	$out.0.DA3_COD = formatString($in.0.DA3_COD, null);
 	$out.0.DA3_DESC = formatString($in.0.DA3_DESC, null);
 	$out.0.DA3_PLACA = formatString($in.0.DA3_PLACA, null);
 	$out.0.INSTANCIA = formatKey($in.0.INSTANCIA, true);
+	$out.0.ID_VEI = formatKey($in.0.ID_VEI, true);
 	return ALL;
 }
 
