@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><Graph author="mateus.romero" created="Tue Nov 21 06:08:43 CST 2017" guiVersion="3.4.4.P" id="1511273164594" licenseType="Commercial" modified="Mon Dec 12 14:59:38 BRST 2022" modifiedBy="Manoel" name="_Main" revision="1.123" showComponentDetails="true">
+<?xml version="1.0" encoding="UTF-8"?><Graph author="mateus.romero" created="Tue Nov 21 06:08:43 CST 2017" guiVersion="3.4.4.P" id="1511273164594" licenseType="Commercial" modified="Wed Dec 21 17:51:26 BRST 2022" modifiedBy="Manoel" name="_Main" revision="1.125" showComponentDetails="true">
 <Global>
 <Property fileURL="workspace.prm" id="GraphParameter0"/>
 <Note alignment="1" backgroundColorB="225" backgroundColorG="255" backgroundColorR="255" enabled="true" folded="false" height="186" id="Note1" textColorB="0" textColorG="0" textColorR="0" textFontSize="8" title="DOWNLOAD DOS ARQUIVOS" titleColorB="0" titleColorG="0" titleColorR="0" titleFontSize="10" width="229" x="16" y="31"/>
@@ -41,7 +41,7 @@
 <Node enabled="enabled" graphName="${GRAPH_DIR}/tms_fct_PerformanceEntrega.grf" guiName="Performance Entrega" guiX="1273" guiY="113" id="PERFORMANCE_ENTREGA" paramsToPass="gdc_agent_zip;LOAD_MODE_FCT;LOAD_MODE_DIM;NUMBER_LOCALE;NUMBER_PATTERN;NUMBER_MAXSIZE;DATE_LOCALE;DATE_PATTERN;MONTHS_TO_LOAD;DEMO_MODE;DEMO_DATE;DATE_TIMEZONE" type="RUN_GRAPH"/>
 </Phase>
 <Phase number="8">
-<Node enabled="enabled" graphName="${GRAPH_DIR}/tms_fct_OutrasReceitas.grf" guiName="Outras receitas" guiX="938" guiY="351" id="OUTRAS_RECEITAS" paramsToPass="gdc_agent_zip;LOAD_MODE_FCT;LOAD_MODE_DIM;NUMBER_LOCALE;NUMBER_PATTERN;NUMBER_MAXSIZE;DATE_LOCALE;DATE_PATTERN;MONTHS_TO_LOAD;DEMO_MODE;DEMO_DATE;DATE_TIMEZONE" type="RUN_GRAPH"/>
+<Node enabled="disabled" graphName="${GRAPH_DIR}/tms_fct_OutrasReceitas.grf" guiName="Outras receitas" guiX="938" guiY="351" id="OUTRAS_RECEITAS" paramsToPass="gdc_agent_zip;LOAD_MODE_FCT;LOAD_MODE_DIM;NUMBER_LOCALE;NUMBER_PATTERN;NUMBER_MAXSIZE;DATE_LOCALE;DATE_PATTERN;MONTHS_TO_LOAD;DEMO_MODE;DEMO_DATE;DATE_TIMEZONE" type="RUN_GRAPH"/>
 </Phase>
 <Phase number="32">
 <Node enabled="enabled" graphName="${GRAPH_DIR}/tms_dim_Documento.grf" guiName="Documento" guiX="282" guiY="194" id="DOCUMENTO" paramsToPass="gdc_agent_zip;LOAD_MODE_FCT;LOAD_MODE_DIM;NUMBER_LOCALE;NUMBER_PATTERN;NUMBER_MAXSIZE;DATE_LOCALE;DATE_PATTERN;MONTHS_TO_LOAD;DEMO_MODE;DEMO_DATE;DATE_TIMEZONE" type="RUN_GRAPH"/>
