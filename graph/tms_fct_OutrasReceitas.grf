@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><Graph author="isabela.lourencini" created="Thu Dec 20 09:45:28 BRST 2018" guiVersion="3.4.4.P" id="1545312668311" licenseType="Commercial" modified="Sat Dec 17 12:46:31 BRST 2022" modifiedBy="Manoel" name="tms_fct_ReceitaTransportadora" revision="1.42" showComponentDetails="true">
+<?xml version="1.0" encoding="UTF-8"?><Graph author="isabela.lourencini" created="Thu Dec 20 09:45:28 BRST 2018" guiVersion="3.4.4.P" id="1545312668311" licenseType="Commercial" modified="Wed Jan 04 17:24:21 BRST 2023" modifiedBy="Manoel" name="tms_fct_ReceitaTransportadora" revision="1.44" showComponentDetails="true">
 <Global>
 <Metadata fileURL="${META_DIR}/_2Dates.fmt" id="Metadata2"/>
 <Metadata fileURL="${META_DIR}/obj_dto.fmt" id="Metadata1"/>
@@ -227,38 +227,44 @@ function integer transform() {
 import "trans/lib.ctl";
 // Transforms input record into output record.
 function integer transform() {
-	$out.0.BK_EMPRESA = formatKey($in.0.BK_EMPRESA, true);
-	$out.0.BK_FILIAL = formatKey($in.0.BK_FILIAL, true);
-	$out.0.BK_REMETENTE = formatKey($in.0.BK_REMETENTE, true);
-	$out.0.BK_DESTINATARIO = formatKey($in.0.BK_DESTINATARIO, true);
-	$out.0.BK_DEVEDOR = formatKey($in.0.BK_DEVEDOR, true);
-	$out.0.BK_CDRORI = formatKey($in.0.BK_CDRORI, true);
-	$out.0.BK_CDRDES = formatKey($in.0.BK_CDRDES, true);
-	$out.0.BK_CDRCAL = formatKey($in.0.BK_CDRCAL, true);
-	$out.0.BK_COMPONENTE = formatKey($in.0.BK_COMPONENTE, true);
-	$out.0.BK_NEGOCIACAO = formatKey($in.0.BK_NEGOCIACAO, true);
-	$out.0.BK_SERVICO = formatKey($in.0.BK_SERVICO, true);
-	$out.0.BK_FILIAL_ORIGEM = formatKey($in.0.BK_FILIAL_ORIGEM, true);
-	$out.0.BK_FILIAL_DESTINO = formatKey($in.0.BK_FILIAL_DESTINO, true);
-	$out.0.BK_FILIAL_DOCTO = formatKey($in.0.BK_FILIAL_DOCTO, true);
-	$out.0.BK_DOCTMS = formatKey($in.0.BK_DOCTMS, true);
-	$out.0.BK_TIPTRA = formatKey($in.0.BK_TIPTRA, true);
-	$out.0.BK_REGIAO_REM = formatKey($in.0.BK_REGIAO_REM, true);
-	$out.0.BK_REGIAO_DES = formatKey($in.0.BK_REGIAO_DES, true);
-	$out.0.BK_REGIAO_DEV = formatKey($in.0.BK_REGIAO_DEV, true);
-	$out.0.BK_FILIAL_ORIGEM_1 = formatKey($in.0.BK_FILIAL_ORIGEM_1, true);
-	$out.0.BK_CDRCAL = formatKey($in.0.BK_CDRCAL, true);
-	$out.0.BK_REGIAO_CDRCAL = formatKey($in.0.BK_REGIAO_CDRCAL, true);
-	$out.0.BK_REGIAO_CDRORI = formatKey($in.0.BK_REGIAO_CDRORI, true);
-	$out.0.DOCUMENTO = formatString($in.0.DOCUMENTO,null);
-	$out.0.SERIE = formatString($in.0.SERIE,null);	
-	$out.0.FILDOC = formatString($in.0.FILDOC, null);
-	$out.0.PRODUTO = formatString($in.0.PRODUTO, null);
-	$out.0.VALOR_COMPONENTE = formatDecimal($in.0.VALOR_COMPONENTE, true);
-	$out.0.VALOR_IMPOSTO = formatDecimal($in.0.VALOR_IMPOSTO, true);
-	$out.0.VALOR_TOTAL = formatDecimal($in.0.VALOR_TOTAL, true);
-	$out.0.DATA_EMISSAO = formatDate($in.0.DATA_EMISSAO);
-	
+    $out.0.DATA_EMISSAO = format_($in.0.DATA_EMISSAO, true);
+    $out.0.DATA_DOC = format_($in.0.DATA_DOC, true);
+    $out.0.ND_NUM = format_($in.0.ND_NUM, true);
+    $out.0.ND_VALOR = format_($in.0.ND_VALOR, true);
+    $out.0.ND_EMISSAO = format_($in.0.ND_EMISSAO, true);
+    $out.0.RPS_PEDIDO = format_($in.0.RPS_PEDIDO, true);
+    $out.0.RPS_TOTAL = format_($in.0.RPS_TOTAL, true);
+    $out.0.RPS_EMISSAO = format_($in.0.RPS_EMISSAO, true);
+    $out.0.DOCAV_DOC = format_($in.0.DOCAV_DOC, true);
+    $out.0.DOCAV_SERIE = format_($in.0.DOCAV_SERIE, true);
+    $out.0.DOCAV_DATEMI = format_($in.0.DOCAV_DATEMI, true);
+    $out.0.BK_REMETENTE = format_($in.0.BK_REMETENTE, true);
+    $out.0.BK_DESTINATARIO = format_($in.0.BK_DESTINATARIO, true);
+    $out.0.BK_DEVEDOR = format_($in.0.BK_DEVEDOR, true);
+    $out.0.BK_CDRORI = format_($in.0.BK_CDRORI, true);
+    $out.0.BK_CDRDES = format_($in.0.BK_CDRDES, true);
+    $out.0.BK_CDRCAL = format_($in.0.BK_CDRCAL, true);
+    $out.0.BK_NEGOCIACAO = format_($in.0.BK_NEGOCIACAO, true);
+    $out.0.BK_SERVICO = format_($in.0.BK_SERVICO, true);
+    $out.0.BK_TIPTRA = format_($in.0.BK_TIPTRA, true);
+    $out.0.BK_FILIAL = format_($in.0.BK_FILIAL, true);
+    $out.0.BK_FILIAL_ORIGEM = format_($in.0.BK_FILIAL_ORIGEM, true);
+    $out.0.BK_FILIAL_DESTINO = format_($in.0.BK_FILIAL_DESTINO, true);
+    $out.0.BK_REGIAO_REM = format_($in.0.BK_REGIAO_REM, true);
+    $out.0.BK_REGIAO_DES = format_($in.0.BK_REGIAO_DES, true);
+    $out.0.BK_REGIAO_DEV = format_($in.0.BK_REGIAO_DEV, true);
+    $out.0.BK_FILIAL_DOCTO = format_($in.0.BK_FILIAL_DOCTO, true);
+    $out.0.DT6_FILDOC = format_($in.0.DT6_FILDOC, true);
+    $out.0.DT6_DOC = format_($in.0.DT6_DOC, true);
+    $out.0.DT6_SERIE = format_($in.0.DT6_SERIE, true);
+    $out.0.ID_VIAGEM = format_($in.0.ID_VIAGEM, true);
+    $out.0.ID_VEICULO_CM = format_($in.0.ID_VEICULO_CM, true);
+    $out.0.ID_VEICULO_RB1 = format_($in.0.ID_VEICULO_RB1, true);
+    $out.0.ID_VEICULO_RB2 = format_($in.0.ID_VEICULO_RB2, true);
+    $out.0.ID_VEICULO_RB3 = format_($in.0.ID_VEICULO_RB3, true);
+    $out.0.ID_MOTORISTA = format_($in.0.ID_MOTORISTA, true);
+
+    $out.0.INSTANCIA = format_($in.0.INSTANCIA, true);
 	$out.0.PK_MODULO = formatString('TMS|RECEITA TRANSPORTADORA', null);
 
 	return ALL;
@@ -283,7 +289,7 @@ function integer transform() {
 // function string getMessage() {}
 ]]></attr>
 </Node>
-<Edge debugMode="true" fromNode="EXT_FILTER1:0" guiBendpoints="" guiRouter="Manhattan" id="Edge12" inPort="Port 0 (in)" metadata="Metadata3" outPort="Port 0 (accepted)" toNode="TRATAMENT:0"/>
+<Edge debugMode="true" fromNode="EXT_FILTER1:0" guiBendpoints="" guiRouter="Manhattan" id="Edge12" inPort="Port 0 (in)" metadata="Metadata6" outPort="Port 0 (accepted)" toNode="TRATAMENT:0"/>
 <Edge debugMode="true" fromNode="LE_E_AS_OUTRAS_RECEITAS:0" guiBendpoints="" guiRouter="Manhattan" id="Edge10" inPort="Port 0 (in)" metadata="Metadata6" outPort="Port 0 (output)" toNode="MONTHS_TO_LOAD_FILTER:0"/>
 <Edge debugMode="true" fromNode="MONTHS_TO_LOAD_FILTER:0" guiBendpoints="" guiRouter="Manhattan" id="Edge11" inPort="Port 0 (in)" metadata="Metadata6" outPort="Port 0 (out)" toNode="EXT_FILTER1:0"/>
 <Edge debugMode="true" fromNode="SIMPLE_COPY:0" guiBendpoints="" guiRouter="Manhattan" id="Edge3" inPort="Port 0 (in)" metadata="Metadata5" outPort="Port 0 (out)" toNode="AGGREGATE_MENOR_DATA1:0"/>
