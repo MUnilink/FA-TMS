@@ -1,10 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?><Graph author="isabela.lourencini" created="Thu Dec 20 09:45:28 BRST 2018" guiVersion="3.4.4.P" id="1545312668311" licenseType="Commercial" modified="Wed Jan 04 17:24:21 BRST 2023" modifiedBy="Manoel" name="tms_fct_ReceitaTransportadora" revision="1.44" showComponentDetails="true">
+<?xml version="1.0" encoding="UTF-8"?><Graph author="isabela.lourencini" created="Thu Dec 20 09:45:28 BRST 2018" guiVersion="3.4.4.P" id="1545312668311" licenseType="Commercial" modified="Mon Jan 09 10:56:54 BRST 2023" modifiedBy="Manoel" name="tms_fct_ReceitaTransportadora" revision="1.48" showComponentDetails="true">
 <Global>
 <Metadata fileURL="${META_DIR}/_2Dates.fmt" id="Metadata2"/>
 <Metadata fileURL="${META_DIR}/obj_dto.fmt" id="Metadata1"/>
 <Metadata fileURL="${META_DIR}/sintax.fmt" id="Metadata4"/>
 <Metadata id="Metadata6" previewAttachment="${DATA_SOURCE_DIR}/outras receitas.csv" previewAttachmentCharset="ISO-8859-1">
 <Record fieldDelimiter="," label="outras receitas.csv" name="outras_receitas_18b9662" previewAttachment="${DATA_SOURCE_DIR}/outras receitas.csv" previewAttachmentCharset="ISO-8859-1" quoteChar="&quot;" quotedStrings="true" recordDelimiter="\n" skipSourceRows="1" type="delimited">
+<Field name="BK_EMPRESA" type="string"/>
 <Field name="DATA_EMISSAO" type="string"/>
 <Field name="DATA_DOC" type="string"/>
 <Field name="ND_NUM" type="string"/>
@@ -46,8 +47,12 @@
 </Metadata>
 <Metadata id="Metadata0" previewAttachment="${DATA_SOURCE_DIR}/outras receitas.csv" previewAttachmentCharset="ISO-8859-1">
 <Record fieldDelimiter="," label="outras receitas.csv" name="outras_receitas_41ef7ca" previewAttachment="${DATA_SOURCE_DIR}/outras receitas.csv" previewAttachmentCharset="ISO-8859-1" quoteChar="&quot;" quotedStrings="true" recordDelimiter="\n" skipSourceRows="1" type="delimited">
+<Field name="BK_EMPRESA" type="string"/>
+<Field name="DATA_EMISSAO" type="string"/>
+<Field name="DATA_DOC" type="string"/>
 <Field name="ND_NUM" type="string"/>
 <Field name="ND_VALOR" type="string"/>
+<Field name="ND_EMISSAO" type="string"/>
 <Field name="RPS_PEDIDO" type="string"/>
 <Field name="RPS_TOTAL" type="string"/>
 <Field name="RPS_EMISSAO" type="string"/>
@@ -79,7 +84,7 @@
 <Field name="ID_VEICULO_RB2" type="string"/>
 <Field name="ID_VEICULO_RB3" type="string"/>
 <Field name="ID_MOTORISTA" type="string"/>
-<Field eofAsDelimiter="false" name="INSTANCIA" type="string"/>
+<Field eofAsDelimiter="false" name="PK_MODULO" type="string"/>
 </Record>
 </Metadata>
 <Metadata id="Metadata3" previewAttachment="zip:(${DATA_SOURCE_DIR}/PROTHEUS.zip)#TMS Receita Transporte.csv" previewAttachmentCharset="ISO-8859-1">
@@ -227,6 +232,7 @@ function integer transform() {
 import "trans/lib.ctl";
 // Transforms input record into output record.
 function integer transform() {
+    $out.0.BK_EMPRESA = format_($in.0.BK_EMPRESA, true);
     $out.0.DATA_EMISSAO = format_($in.0.DATA_EMISSAO, true);
     $out.0.DATA_DOC = format_($in.0.DATA_DOC, true);
     $out.0.ND_NUM = format_($in.0.ND_NUM, true);
@@ -295,7 +301,7 @@ function integer transform() {
 <Edge debugMode="true" fromNode="SIMPLE_COPY:0" guiBendpoints="" guiRouter="Manhattan" id="Edge3" inPort="Port 0 (in)" metadata="Metadata5" outPort="Port 0 (out)" toNode="AGGREGATE_MENOR_DATA1:0"/>
 <Edge debugMode="true" fromNode="SIMPLE_COPY:1" guiBendpoints="" guiRouter="Manhattan" id="Edge14" inPort="Port 0 (in)" metadata="Metadata5" outPort="Port 1 (out)" toNode="AGGREGATE_MENOR_DATA2:0"/>
 <Edge debugMode="true" fromNode="SIMPLE_COPY:2" guiBendpoints="" guiRouter="Manhattan" id="Edge15" inPort="Port 0 (in)" metadata="Metadata5" outPort="Port 2 (out)" toNode="SIMPLE_COPY1:0"/>
-<Edge debugMode="true" fromNode="TRATAMENT:0" guiBendpoints="" guiRouter="Manhattan" id="Edge7" inPort="Port 0 (in)" metadata="Metadata5" outPort="Port 0 (out)" toNode="SIMPLE_COPY:0"/>
+<Edge fromNode="TRATAMENT:0" guiBendpoints="" guiRouter="Manhattan" id="Edge0" inPort="Port 0 (in)" metadata="Metadata0" outPort="Port 0 (out)" toNode="SIMPLE_COPY:0"/>
 </Phase>
 <Phase number="20">
 <Node enabled="enabled" guiName="Aggregate" guiX="684" guiY="62" id="AGGREGATE_MENOR_DATA1" mapping="$Min_Date:=min($DATA_EMISSAO);$Max_Date:=max($DATA_EMISSAO);" type="AGGREGATE">
